@@ -1,0 +1,18 @@
+---
+title: "Federico Acosta y Lara"
+image: "tobi.jpg"
+links:
+  - label: Twitter
+    url: "https://twitter.com/fedeayl"
+  - label: GitHub
+    url: "https://github.com/Fedeayl"
+  - label: Email
+    url: "mailto:federico.acostaylara@outlook.com"
+  - label: Google Scholar
+    url: "https://scholar.google.com/citations?user=OwmUSLgAAAAJ&hl=es"
+output:
+  postcards::jolla
+site: distill::distill_website
+---
+ 
+I got my B.A. in Political Science in UdelaR (Uruguay) in 2020 and a diploma in economics in 2021. Currenly, I am pursuing an M.A. degree in the same institution and I am working on ideological derives of right-wing parties during the Left Turn in Latin America. In a nutshell, my interest relay on the field of comparative politics, political economy and quantitative methodology. You can find my published work, links to replication data and code, and some other stuff on this site.
