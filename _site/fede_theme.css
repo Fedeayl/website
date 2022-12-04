@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      30px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      12px;
+  --fig-cap-size:    13px;
+  
+  /*-- Main font colors --*/
+  --title-color:     #3B4252;
+  --header-color:    #434C5E;
+  --body-color:      #4C566A;
+  --aside-color:     #4C566A;
+  --fig-cap-color:   #4C566A;
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:    Inter;
+  --mono-font:       monospace;
+  --body-font:       Inter;
+  --navbar-font:     Inter;  /* websites + blogs only */
+}
+
+/*--  METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   #3B4252;
+  --body-size:       0.8rem;
+  --body-color:      #434C5E;
+
+
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    14px;
+  --contents-size:   12px;
+
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    12px;
+  --heading-color:   #3B4252;
+  --text-size:       0.8em;
+  --text-color:      #4C566A;
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       18px;
+  --text-color:       #ECEFF4;
+  --text-size:        15px;
+  --hover-color:      #81A1C1;
+  --bkgd-color:       #2E3440;
+}
+
+
+.distill-site-footer {
+  --text-color:       #ECEFF4;
+  --text-size:        12px;
+  --hover-color:      #81A1C1;
+  --bkgd-color:       #2E3440;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height:30px;
+    padding:0 20px;
+}
+
+
+
+
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+.btn-outline-dark{
+  background-color: transparent;
+  color: #2E3440;
+  border: 1px solid;
+  border-color: #2E3440;
+}
+
+.btn-outline-dark:hover{
+  background-color: #3B4252;
+  border-color: #3B4252;
+  color: #D8DEE9;
+}
+
+/* Darkmode */
+
+   .darkmode {
+     /*-- Main font sizes --*/
+     --title-size:      30px;
+     --body-size:       1.06rem;
+     --code-size:       14px;
+     --aside-size:      12px;
+     --fig-cap-size:    13px;
+     /*-- Main font colors --*/
+     --title-color:     #ECEFF4;
+     --header-color:    #ECEFF4;
+     --body-color:      #ECEFF4;
+     --aside-color:     #ECEFF4;
+     --fig-cap-color:   #ECEFF4;
+     /*-- Specify custom fonts ~~~ must be imported above   --*/
+     --heading-font:    Inter;
+     --mono-font:       Inter;
+     --body-font:       Inter;
+     --navbar-font:     Inter; /* websites + blogs only */
+     background-color: #434C5E;
+     color: #E5E9F0;
+   }
+
+   .darkmode body {
+     background-color: #E5E9F0;
+   }
+
+   .darkmode d-article {
+     background-color: #434C5E;
+     color: #E5E9F0;
+   }
+
+   .darkmode d-title {
+     color: #D8DEE9;
+   }
+
+   .darkmode d-byline {
+     --heading-size:    0.6rem;
+     --heading-color:   #ECEFF4;
+     --body-size:       0.8rem;
+     --body-color:      #ECEFF4;
+   }
+
+   .darkmode .d-contents {
+     --heading-size:    18px;
+     --contents-size:   13px;
+   }
+
+   .darkmode d-appendix {
+     --heading-size:    15px;
+     --heading-color:   #ECEFF4;
+     --text-size:       0.8em;
+     --text-color:      #ECEFF4;
+   }
+
+   .darkmode d-appendix a {
+     color:      #ECEFF4;
+   }
+
+   .darkmode .distill-site-header {
+     --title-size:       18px;
+     --text-color:       #ECEFF4;
+     --text-size:        15px;
+     --hover-color:      #81A1C1;
+     --bkgd-color:       #2E3440;
+   }
+
+   .darkmode .distill-site-footer {
+     --text-color:       #ECEFF4;
+     --text-size:        12px;
+     --hover-color:      #81A1C1;
+     --bkgd-color:       #2E3440;
+   }
+
+   .darkmode d- .sourceCode {
+     background-color: #555;
+   }
+   
+   .darkmode .btn-outline-dark {
+     background-color: transparent;
+     color: #ECEFF4;
+     border: 1px solid;
+     border-color: #ECEFF4;
+     
+   }
+   .darkmode .btn-outline-dark:hover{
+     background-color: #ECEFF4;
+     border-color: #434C5E;
+     color: #434C5E;
+}
