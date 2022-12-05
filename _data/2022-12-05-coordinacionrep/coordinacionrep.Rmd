@@ -1,0 +1,38 @@
+---
+title: "Replication: Coordinación Electoral y Doble Voto Simultáneo"
+description: |
+    Data and code to replicate the results of the article.
+author:
+  - first_name: Federico
+    last_name: Acosta y Lara
+    orcid_id: 0000-0001-9238-2162
+date: 2022-12-04
+output:
+  distill::distill_article:
+    self_contained: false
+preview: coordinacion2022.png
+---
+
+
+
+
+:::float-image
+
+```{r out.width='40%px', out.extra='style="float:left; padding:10px "', echo=FALSE}
+knitr::include_graphics("coordinacion2022.png")
+```
+
+
+Replication code and data [**HERE**](https://github.com/Fedeayl/Dep_ElectoralCoordinationUY)  
+
+Download the article [**HERE** ](https://doi.org/10.26851/RUCP.31.2.2) or read it in English [**HERE**](coordinacionEnglish.pdf).
+
+[Cite APA](APAcoordinacion2022.txt)  
+
+[Cite Bibtex](BIBcoordinacion2022.bib)
+
+:::
+
+
+
+
