@@ -1,20 +1,28 @@
 ---
 title: "This website"
-description: "Tools I've used to build this site"
+description: "Tools and resources I've used to build this site"
 author:
   - name: Federico Acosta y Lara
 date: 2022-12-03
 output:
   distill::distill_article:
     self_contained: false
-preview: web_preview.jpg
+preview: web_preview.png
 ---
 
 
+
+:::float-image
+
+```{r out.width='40%px', out.extra='style="float:left; padding:10px "', echo=FALSE}
+knitr::include_graphics("web_preview.png")
+```
+
 This site was built using [**RStudio**](https://posit.co) and the [**Distill package**](https://rstudio.github.io/distill). 
 
+You can access to the complete code of this site [**here** <i class="fab fa-github"></i> ](https://github.com/Fedeayl/website).
 
-You can access to the complete code of this site [**here** <i class="fab fa-github"></i> ](https://github.com/Fedeayl/website)
+:::
 
 Some valuable resources that have helped me a lot are:
 

@@ -2,7 +2,7 @@
   {
     "path": "stuff/2022-12-03-website-building/",
     "title": "This website",
-    "description": "Tools I've used to build this site",
+    "description": "Tools and resources I've used to build this site",
     "author": [
       {
         "name": "Federico Acosta y Lara",
@@ -11,9 +11,9 @@
     ],
     "date": "2022-12-03",
     "categories": [],
-    "contents": "\nThis site was built using RStudio and the Distill package.\nYou can access to the complete code of this site here \nSome valuable resources that have helped me a lot are:\nBuilding websites in R with Distill: It is a YouTube tutorial on building websites using Distill. Very detailed and great for beginners.\nDistill for R Markdown: A useful blog that teaches how to develop not only websites but also articles and blogs.\nrstudio4edu: An online handbook designed to help in the design of educational content using R Markdown. Many useful details.\n\n\n\n",
-    "preview": "stuff/2022-12-03-website-building/web_preview.jpg",
-    "last_modified": "2022-12-03T23:14:45-03:00",
-    "input_file": "website-building.knit.md"
+    "contents": "\n\n\n\n\nThis site was built using RStudio and the Distill package.\nYou can access to the complete code of this site here \n\nSome valuable resources that have helped me a lot are:\nBuilding websites in R with Distill: It is a YouTube tutorial on building websites using Distill. Very detailed and great for beginners.\nDistill for R Markdown: A useful blog that teaches how to develop not only websites but also articles and blogs.\nrstudio4edu: An online handbook designed to help in the design of educational content using R Markdown. Many useful details.\n\n\n\n",
+    "preview": "stuff/2022-12-03-website-building/web_preview.png",
+    "last_modified": "2022-12-05T03:31:02-03:00",
+    "input_file": {}
   }
 ]

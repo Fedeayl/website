@@ -1,0 +1,40 @@
+---
+title: "COVID-19 y elecciones subnacionales en Uruguay"
+description: |
+   Chapter of the book "La democracia a prueba. Los años que votamos en pandemia en las Américas", published by Universidad Nacional de Rosario.
+author:
+  - first_name: Federico
+    last_name: Acosta y Lara
+    orcid_id: 0000-0001-9238-2162
+  - first_name: Diego
+    last_name: Luján
+    orcid_id: 0000-0002-2045-7652
+date: 2022-12-04
+output:
+  distill::distill_article:
+    self_contained: false
+preview: depcovid2021.png
+---
+
+
+:::float-image
+
+```{r out.width='40%px', out.extra='style="float:left; padding:10px "', echo=FALSE}
+knitr::include_graphics("depcovid2021.png")
+```
+In this chapter we use a rational choice approach to analyze the effects of the COVID-19 pandemic on the 2020 Uruguayan sub-national elections turnout. 
+
+[**ISBN** 978-987-813-093-4](http://isbn.bibna.gub.uy/catalogo.php?mode=detalle&nt=42860)
+
+[Cite APA](APAdepcovid2021.txt)
+
+[Cite Bibtex](BIBdepcovid2021.bib)
+
+
+:::
+
+Download the chapter [HERE](depcovidCHP.pdf)
+
+Download the book [HERE](http://rephip.unr.edu.ar/xmlui/bitstream/handle/2133/23410/La-democracia-a-prueba.pdf?sequence=3)
+
+

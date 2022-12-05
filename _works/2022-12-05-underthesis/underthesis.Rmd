@@ -1,0 +1,35 @@
+---
+title: "Coordinación Electoral y Doble Voto Simultáneo"
+description: |
+    In my undergraduate thesis I studied the electoral coordination process on the subnational level in Uruguay.
+author:
+  - first_name: Federico
+    last_name: Acosta y Lara
+    orcid_id: 0000-0001-9238-2162
+date: 2022-12-04
+output:
+  distill::distill_article:
+    self_contained: false
+preview: thesis.png
+---
+
+ 
+
+:::float-image
+
+```{r out.width='40%px', out.extra='style="float:left; padding:10px "', echo=FALSE}
+knitr::include_graphics("thesis.png")
+```
+
+In my undergraduate thesis I studied the electoral coordination process on the subnational level in Uruguay. 
+
+[Download **HERE** ](https://hdl.handle.net/20.500.12008/26081)
+
+[Cite APA](APAthesis.txt)  
+
+[Cite Bibtex](BIBthesis.bib)
+
+:::
+
+
+

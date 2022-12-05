@@ -1,0 +1,69 @@
+[
+  {
+    "path": "works/2022-12-04-elecciones-2019/",
+    "title": "We are fantastic, are we?",
+    "description": "Chapter of the book \"De la estabilidad al equilibrio inestable\", published by the Department of Political Science - UdelaR.",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      },
+      {
+        "name": "Guillermo Martínez",
+        "url": {}
+      },
+      {
+        "name": "Juan Andrés Moraes",
+        "url": {}
+      },
+      {
+        "name": "Wilchinski Marcelo",
+        "url": {}
+      }
+    ],
+    "date": "2022-12-04",
+    "categories": [],
+    "contents": "\n\n\n\n\nIn this chapter we analyzed the Uruguayan political system from a comparative perspective. We showed that our system is less volatile and less fragmented than almost any other on the region. On the contrary, it is the most ideologically polarized. Looking at the temporal trend of these variables, we find that there is a growing pattern in all of them.\nISBN 978-9974-8594-3-2\nCite APA\nCite Bibtex\n\nView Graphs\n\n\n\n",
+    "preview": "works/2022-12-04-elecciones-2019/elecciones2019.png",
+    "last_modified": "2022-12-04T17:30:52-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "works/2022-12-05-covidydep2020/",
+    "title": "COVID-19 y elecciones subnacionales en Uruguay",
+    "description": "Chapter of the book \"La democracia a prueba. Los años que votamos en pandemia en las Américas\", published by Universidad Nacional de Rosario.",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      },
+      {
+        "name": "Diego Luján",
+        "url": {}
+      }
+    ],
+    "date": "2022-12-04",
+    "categories": [],
+    "contents": "\n\n\n\n\nIn this chapter we use a rational choice approach to analyze the effects of the COVID-19 pandemic on the 2020 Uruguayan sub-national elections turnout.\nISBN 978-987-813-093-4\nCite APA\nCite Bibtex\n\nDownload the chapter HERE\nDownload the book HERE\n\n\n\n",
+    "preview": "works/2022-12-05-covidydep2020/depcovid2021.png",
+    "last_modified": "2022-12-05T03:24:49-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "works/2022-12-05-underthesis/",
+    "title": "Coordinación Electoral y Doble Voto Simultáneo",
+    "description": "In my undergraduate thesis I studied the electoral coordination process on the subnational level in Uruguay.",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      }
+    ],
+    "date": "2022-12-04",
+    "categories": [],
+    "contents": "\n\n\n\n\nIn my undergraduate thesis I studied the electoral coordination process on the subnational level in Uruguay.\nDownload HERE\nCite APA\nCite Bibtex\n\n\n\n\n",
+    "preview": "works/2022-12-05-underthesis/thesis.png",
+    "last_modified": "2022-12-05T03:49:01-03:00",
+    "input_file": "underthesis.knit.md"
+  }
+]

@@ -22,6 +22,7 @@ navbar:
     - icon: fas fa-adjust
   search: false
   logo: "images/avatar.png"
+  favicon: "images/favicon.png"
 output: 
   distill::distill_article:
     includes:
