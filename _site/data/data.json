@@ -1,0 +1,19 @@
+[
+  {
+    "path": "data/2022-12-05-coordinacionrep/",
+    "title": "Replication: Coordinación Electoral y Doble Voto Simultáneo",
+    "description": "Data and code to replicate the results of the article.",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      }
+    ],
+    "date": "2022-12-04",
+    "categories": [],
+    "contents": "\n\n\n\n\nReplication code and data HERE\nDownload the article HERE or in English HERE.\nCite APA\nCite Bibtex\n\n\n\n\n",
+    "preview": "data/2022-12-05-coordinacionrep/coordinacion2022.png",
+    "last_modified": "2022-12-05T04:32:17-03:00",
+    "input_file": {}
+  }
+]

@@ -25,7 +25,7 @@ knitr::include_graphics("coordinacion2022.png")
 
 Replication code and data [**HERE**](https://github.com/Fedeayl/Dep_ElectoralCoordinationUY)  
 
-Download the article [**HERE** ](https://doi.org/10.26851/RUCP.31.2.2) or read it in English [**HERE**](coordinacionEnglish.pdf).
+Download the article [**HERE** ](https://doi.org/10.26851/RUCP.31.2.2) or in English [**HERE**](coordinacionEnglish.pdf).
 
 [Cite APA](APAcoordinacion2022.txt)  
 
