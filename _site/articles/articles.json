@@ -1,5 +1,26 @@
 [
   {
+    "path": "articles/2022-12-21-marcha/",
+    "title": "La  batalla  virtual  por la  memoria:  Un  análisis  de  las  memorias  en disputa en Twitter durante la Marcha del Silencio del 2020 en Uruguay ",
+    "description": "Artículo publicado en Teknokultura (2022)",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      },
+      {
+        "name": "Marcelo Wilchinski",
+        "url": {}
+      }
+    ],
+    "date": "2022-12-21",
+    "categories": [],
+    "contents": "\n\n\n\n\nThe declaration of a public health emergency for COVID-19 forced the traditional March of Silence, one of the largest marches in Uruguay, to move completely online. In this unusual context, the article examines how public memories are developed through a quantitative analysis of Twitter activity that analyzed the struggle over memories of Uruguay’s recent past. As with the results of other research, thispaper demonstrates that there are at least two opposing public memories: the predominant one which has state terrorism as its central concept and is linked to the political left; and an alternative memory which follows the theory of the two demons. For each of the memories in this virtual battle, the article describes the associated actors and their social ties, including the participation of political parties, legislators, and state ministers.\nDownload HERE\n\nCite APA\nCite Bibtex\n\n\n\n",
+    "preview": "articles/2022-12-21-marcha/Marcha.png",
+    "last_modified": "2022-12-21T19:54:35-03:00",
+    "input_file": "marcha.knit.md"
+  },
+  {
     "path": "articles/2022-12-04-electoral-coordination/",
     "title": "Coordinación Electoral y Doble Voto Simultáneo",
     "description": "Artículo publicado en la Revista Uruguaya de Ciencia Política (2022)",

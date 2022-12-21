@@ -12,8 +12,8 @@ author:
   - first_name: Juan Andrés
     last_name: Moraes
     orcid_id: 0000-0002-7406-3691
-  - first_name: Wilchinski
-    last_name: Marcelo
+  - first_name: Marcelo
+    last_name: Wilchinski
     orcid_id: 0000-0002-3314-0910             
 date: 2022-12-04
 output:
