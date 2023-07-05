@@ -1,5 +1,22 @@
 [
   {
+    "path": "articles/2023-07-05-paraguayinst/",
+    "title": "La institucionalización del sistema de partidos de Paraguay, ¿estable, arraigado y programático?",
+    "description": "Artículo publicado en Revista Paraguay desde las Ciencias Sociales (2023)",
+    "author": [
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      }
+    ],
+    "date": "2023-07-23",
+    "categories": [],
+    "contents": "\n\n\n\n\nThe institutionalization of a party system has traditionally been considered relevant to the democratic quality of a country. This work investigates the institutionalization of the Paraguayan party system in two dimensions: the stability of the electoral competition and the rootedness of parties in society. At the same time, this work focuses on the ideological component of this linkage. Here, it is shown that the Paraguayan party system is stable over time and across the territory. It is a slightly ideologically polarized system, but there is a trend of higher polarization in legislative elites and evident ideological differences among voters of different parties.\nDownload HERE\n\nCite APA\nCite Bibtex\n\n\n\n",
+    "preview": "articles/2023-07-05-paraguayinst/py.png",
+    "last_modified": "2023-07-05T18:12:20-03:00",
+    "input_file": "paraguayinst.knit.md"
+  },
+  {
     "path": "articles/2022-12-21-marcha/",
     "title": "La  batalla  virtual  por la  memoria:  Un  análisis  de  las  memorias  en disputa en Twitter durante la Marcha del Silencio del 2020 en Uruguay ",
     "description": "Artículo publicado en Teknokultura (2022)",
