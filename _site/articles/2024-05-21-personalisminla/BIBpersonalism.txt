@@ -1,0 +1,10 @@
+@article{Lujan_2024,
+  title={Assessing Electoral Personalism in Latin American Presidential Elections},
+  author={Luj{\'a}n, D. and Acosta y Lara, F.},
+  journal={Journal of Politics in Latin America},
+  volume={0},
+  number={0},
+  year={2024},
+  doi={10.1177/1866802X241250034},
+  URL={https://doi.org/10.1177/1866802X241250034}
+}

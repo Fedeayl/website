@@ -1,5 +1,26 @@
 [
   {
+    "path": "articles/2024-05-21-personalisminla/",
+    "title": "Assessing Electoral Personalism in Latin American Presidential Elections",
+    "description": "Published in Journal of Politics in Latin America (2024)",
+    "author": [
+      {
+        "name": "Diego Luján",
+        "url": {}
+      },
+      {
+        "name": "Federico Acosta y Lara",
+        "url": {}
+      }
+    ],
+    "date": "2024-05-06",
+    "categories": [],
+    "contents": "\n\n\n\n\nLatin American democracies have been characterised as the product of personalistic leaders relying on their unique qualities to achieve and maintain political power. However, this characterisation has lacked conceptual and empirical development since the term “personalism” has been used to account simultaneously for a particular type of electoral appeal seeking to mobilise and persuade voters and for the concentration of power in a single political leader. This article advances in conceptualising electoral personalism as a strategy followed by political elites appealing to voters based on the personal characteristics of leaders and candidates, distinguishing it from personalisation as the concentration of power in a single leader. Based on statistical analysis, we propose two novel indicators of electoral personalism and assess its prevalence among Latin American countries. The article also advances in exploring its political, economic, and social determinants at the aggregate and individual levels.\nDownload HERE\n\nCite APA\nCite Bibtex\n\n\n\n",
+    "preview": "articles/2024-05-21-personalisminla/jpla.png",
+    "last_modified": "2024-05-21T14:02:22-05:00",
+    "input_file": "personalisminla.knit.md"
+  },
+  {
     "path": "articles/2023-07-05-paraguayinst/",
     "title": "La institucionalización del sistema de partidos de Paraguay, ¿estable, arraigado y programático?",
     "description": "Artículo publicado en Revista Paraguay desde las Ciencias Sociales (2023)",
@@ -13,7 +34,7 @@
     "categories": [],
     "contents": "\n\n\n\n\nThe institutionalization of a party system has traditionally been considered relevant to the democratic quality of a country. This work investigates the institutionalization of the Paraguayan party system in two dimensions: the stability of the electoral competition and the rootedness of parties in society. At the same time, this work focuses on the ideological component of this linkage. Here, it is shown that the Paraguayan party system is stable over time and across the territory. It is a slightly ideologically polarized system, but there is a trend of higher polarization in legislative elites and evident ideological differences among voters of different parties.\nDownload HERE\n\nCite APA\nCite Bibtex\n\n\n\n",
     "preview": "articles/2023-07-05-paraguayinst/py.png",
-    "last_modified": "2023-07-05T18:12:20-03:00",
+    "last_modified": "2024-05-21T13:45:00-05:00",
     "input_file": "paraguayinst.knit.md"
   },
   {
@@ -34,7 +55,7 @@
     "categories": [],
     "contents": "\n\n\n\n\nThe declaration of a public health emergency for COVID-19 forced the traditional March of Silence, one of the largest marches in Uruguay, to move completely online. In this unusual context, the article examines how public memories are developed through a quantitative analysis of Twitter activity that analyzed the struggle over memories of Uruguay’s recent past. As with the results of other research, thispaper demonstrates that there are at least two opposing public memories: the predominant one which has state terrorism as its central concept and is linked to the political left; and an alternative memory which follows the theory of the two demons. For each of the memories in this virtual battle, the article describes the associated actors and their social ties, including the participation of political parties, legislators, and state ministers.\nDownload HERE\n\nCite APA\nCite Bibtex\n\n\n\n",
     "preview": "articles/2022-12-21-marcha/Marcha.png",
-    "last_modified": "2022-12-21T19:54:35-03:00",
+    "last_modified": "2024-05-21T13:46:40-05:00",
     "input_file": "marcha.knit.md"
   },
   {
@@ -51,7 +72,7 @@
     "categories": [],
     "contents": "\n\n\n\n\nThe 1996 electoral reform made departmental elections independent from national elections in Uruguay and configured traditional first-past-the-post systems at the sub-national level. Yet, they preserved a voting mechanism called Double Simultaneous Vote that is crucial for the dynamic of the contest. This article proposes an adaptation of the classic theory of electoral coordination, considering the effects of that mechanism. Specifically, it argues that the upper limit of effective candidates in the system is four, which is twice the upper limit of a traditional majoritarian electoral system. This argument is tested using data for Uruguay during the 1971 to 2020 period.\nDownload HERE or read it in English HERE.\n\nCite APA\nCite Bibtex\n\n\n\n",
     "preview": "articles/2022-12-04-electoral-coordination/coordinacion2022.png",
-    "last_modified": "2022-12-05T02:28:47-03:00",
-    "input_file": {}
+    "last_modified": "2024-05-21T13:49:42-05:00",
+    "input_file": "electoral-coordination.knit.md"
   }
 ]
