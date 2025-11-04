@@ -1,4 +1,48 @@
 ---
 title: "My articles"
-listing: articles
+output:
+  distill::distill_article:
+    self_contained: false
 ---
+
+Peer-reviewed publications.
+
+```{r, echo=FALSE, results='asis'}
+# Build a clean list of items in _articles/
+library(rmarkdown)
+
+root <- "_articles"
+dirs <- list.dirs(root, recursive = FALSE, full.names = TRUE)
+dirs <- dirs[file.exists(file.path(dirs, "index.Rmd"))]
+
+# read YAML front matter safely
+fm <- lapply(file.path(dirs, "index.Rmd"), rmarkdown::yaml_front_matter)
+
+# order by date (newest first)
+ord <- order(as.Date(vapply(fm, function(x) x$date %||% "1900-01-01", "")),
+             decreasing = TRUE)
+dirs <- dirs[ord]; fm <- fm[ord]
+
+`%||%` <- function(a,b) if (is.null(a) || identical(a, "")) b else a
+
+cat('<ul class="publication-list">\n')
+for (i in seq_along(fm)) {
+  y <- fm[[i]]
+  title   <- y$title %||% "Untitled"
+  desc    <- y$description %||% ""
+  date    <- y$date %||% ""
+  authors <- ""
+  if (!is.null(y$author)) {
+    an <- vapply(y$author, function(a) paste(c(a$first_name, a$last_name), collapse=" "), "")
+    authors <- paste(an[nzchar(an)], collapse = " · ")
+  }
+  # collection output lives at 'articles/<folder>/'
+  href <- file.path("articles", basename(dirs[i]), "")
+  cat('  <li>\n')
+  cat(sprintf('    <div class="pub-title"><a href="%s">%s</a></div>\n', href, title))
+  if (nzchar(desc))    cat(sprintf('    <div class="pub-meta">%s</div>\n', desc))
+  if (nzchar(authors)) cat(sprintf('    <div class="pub-authors">%s</div>\n', authors))
+  if (nzchar(date))    cat(sprintf('    <div class="pub-meta">%s</div>\n', date))
+  cat('  </li>\n')
+}
+cat('</ul>\n')

@@ -18,6 +18,10 @@ editor_options:
 ---
 
 
-I got a B.A. in Political Science in UdelaR (Uruguay) in 2020. Currently I am pursuing an M.A. degree in the same institution. 
+I am a Ph.D. student in Political Science at Washington University in St. Louis.
 
-You can find my published work, links to replication data and code, and some other stuff on this site.
+Before joining WashU, I earned a Master’s degree (2024) and a B.A. in Political Science (2020) from the Universidad de la República (Uruguay).
+
+My research focuses on political economy and distributive politics in Latin America, with a particular interest in how clientelism, party systems, and institutional reforms shape political behavior and representation. I also study affective polarization, especially in contexts characterized by weakly institutionalized party systems.
+
+On this site, you can find my published work, replication materials, data, code, and other ongoing projects.

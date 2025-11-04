@@ -1,0 +1,41 @@
+---
+title: "We are fantastic, are we?"
+description: "Book chapter in *De la estabilidad al equilibrio inestable*, published by the Department of Political Science, Universidad de la República (2022)."
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+  - first_name: "Guillermo"
+    last_name: "Martínez"
+  - first_name: "Juan Andrés"
+    last_name: "Moraes"
+    orcid_id: "0000-0002-7406-3691"
+  - first_name: "Marcelo"
+    last_name: "Wilchinski"
+    orcid_id: "0000-0002-3314-0910"
+date: "2022-12-04"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+In this chapter we analyzed the Uruguayan political system from a comparative perspective. We showed that the system is less volatile and less fragmented than almost any other in the region. Conversely, it is the most ideologically polarized. Looking for temporal trends, we find a growing pattern in all these dimensions.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Book chapter (PDF)** | [Download here →](https://github.com/Fedeayl/Libro-Elecciones/blob/main/De%20la%20estabilidad%20al%20equilibrio%20inestable_2021.pdf) |
+| **ISBN record** | [View entry →](http://isbn.bibna.gub.uy/catalogo.php?mode=detalle&nt=42860) |
+
+
+---
+
+## Replication materials
+
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/Libro-Elecciones).

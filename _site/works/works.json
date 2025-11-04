@@ -2,7 +2,7 @@
   {
     "path": "works/2022-12-04-elecciones-2019/",
     "title": "We are fantastic, are we?",
-    "description": "Chapter of the book \"De la estabilidad al equilibrio inestable\", published by the Department of Political Science - UdelaR.",
+    "description": "Book chapter in *De la estabilidad al equilibrio inestable*, published by the Department of Political Science, Universidad de la República (2022).",
     "author": [
       {
         "name": "Federico Acosta y Lara",
@@ -23,10 +23,10 @@
     ],
     "date": "2022-12-04",
     "categories": [],
-    "contents": "\n\n\n\n\nIn this chapter we analyzed the Uruguayan political system from a comparative perspective. We showed that our system is less volatile and less fragmented than almost any other on the region. On the contrary, it is the most ideologically polarized. Looking for a temporal trend, we find a growing pattern in all of them.\nISBN 978-9974-8594-3-2\nCite APA\nCite Bibtex\n\nView Graphs\n\n\n\n",
-    "preview": "works/2022-12-04-elecciones-2019/elecciones2019.png",
-    "last_modified": "2022-12-21T19:55:07-03:00",
-    "input_file": "elecciones-2019.knit.md"
+    "contents": "\nAbstract\nIn this chapter we analyzed the Uruguayan political system from a comparative perspective. We showed that the system is less volatile and less fragmented than almost any other in the region. Conversely, it is the most ideologically polarized. Looking for temporal trends, we find a growing pattern in all these dimensions.\nAccess and citation\nResource\nLink\nBook chapter (PDF)\nDownload here →\nISBN record\nView entry →\nReplication materials\nReplication data and code are available HERE →.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2025-11-04T14:42:28-06:00",
+    "input_file": {}
   },
   {
     "path": "works/2022-12-05-covidydep2020/",
@@ -45,8 +45,8 @@
     "date": "2022-12-04",
     "categories": [],
     "contents": "\n\n\n\n\nIn this chapter we use a rational choice approach to analyze the effects of the COVID-19 pandemic on the 2020 Uruguayan sub-national elections turnout.\nISBN 978-987-813-093-4\nCite APA\nCite Bibtex\n\nDownload the chapter HERE\nDownload the book HERE\n\n\n\n",
-    "preview": "works/2022-12-05-covidydep2020/depcovid2021.png",
-    "last_modified": "2022-12-05T03:24:49-03:00",
+    "preview": {},
+    "last_modified": "2022-12-05T00:24:49-06:00",
     "input_file": {}
   },
   {
@@ -62,8 +62,8 @@
     "date": "2022-12-04",
     "categories": [],
     "contents": "\n\n\n\n\nIn my undergraduate thesis I studied the electoral coordination process on the subnational level in Uruguay.\nDownload HERE\nCite APA\nCite Bibtex\n\n\n\n\n",
-    "preview": "works/2022-12-05-underthesis/thesis.png",
-    "last_modified": "2022-12-05T03:49:01-03:00",
+    "preview": {},
+    "last_modified": "2022-12-05T00:49:01-06:00",
     "input_file": {}
   }
 ]

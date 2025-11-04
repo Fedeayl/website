@@ -1,0 +1,36 @@
+---
+title: "Uruguay 2024: el retorno del Frente Amplio y la consolidación de dos bloques electorales"
+description: "Published in Revista Uruguaya de Ciencia Política (2025)"
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+  - first_name: "Guillermo"
+    last_name: "Martínez"
+    orcid_id: "0009-0006-3036-0172"
+date: "2025-05-23"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+## Abstract
+
+he 2024 Uruguayan elections marked the return of the Broad Front to government after a period under the National Party and the Republican Coalition. This article analyzes the electoral process and outcomes within the framework of the consolidation of two stable political blocs: the Broad Front and the center-right coalition. Using data from the primaries, general elections, and plebiscites, it examines the evolution of competition between parties and blocs. The article highlights the stability of the party system alongside the growing significance of bloc competition. Finally, it discusses the challenges facing the new government and the prospects for the opposition.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Published version (RUCP)** | [Go to journal site →](https://revistasfcs.edu.uy/index.php/rucp/article/view/154) |
+| **Full text (PDF)** | [Download here →](https://revistasfcs.edu.uy/index.php/rucp/article/view/154/309) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=OwmUSLgAAAAJ&citation_for_view=OwmUSLgAAAAJ:Y0pCki6q_DkC) |
+
+---
+
+## Replication materials
+
+Replication data and code are available upon request.

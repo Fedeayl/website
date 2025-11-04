@@ -15,15 +15,6 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-- **M.A. Political Science** - [UdelaR](https://cienciassociales.edu.uy/departamento-de-ciencia-politica/ensenanza-de-posgrado/maestria-en-ciencia-politica/) : 2022 - *In progress*
-
-- **Diploma in economics for noneconomists** [UdelaR](https://cienciassociales.edu.uy/departamento-de-economia/ensenanza-de-posgrado/diploma-en-economia-no-economistas/) : 2021
-
-- **B.A. Political Science** - [UdelaR](https://cienciassociales.edu.uy/ensenanza/licenciatura-en-ciencia-politica/) : 2015 - 2020
-
-
-In a nutshell, my interest relay on the field of comparative politics, political economy and quantitative methodology.
-
 You can download my résumé [**here**](images/cv_resume.pdf).
 
 

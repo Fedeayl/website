@@ -1,0 +1,37 @@
+---
+title: "La batalla virtual por la memoria: Un análisis de las memorias en disputa en Twitter durante la Marcha del Silencio del 2020 en Uruguay"
+description: "Published in Teknokultura (2022)"
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+  - first_name: "Marcelo"
+    last_name: "Wilchinski"
+    orcid_id: "0000-0002-3314-0910"
+date: "2022-12-21"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+The declaration of a public health emergency for COVID-19 forced the traditional March of Silence, one of the largest marches in Uruguay, to move completely online. In this unusual context, the article examines how public memories are developed through a quantitative analysis of Twitter activity that analyzed the struggle over memories of Uruguay’s recent past. As with the results of other research, thispaper  demonstrates  that  there  are  at  least  two  opposing  public  memories:  the  predominant  one which  has  state  terrorism  as  its  central  concept  and  is  linked  to  the  political  left;  and  an  alternative memory which follows the theory of the two demons. For each of the memories in this virtual battle, the article describes the associated actors and their social ties, including the participation of political parties, legislators, and state ministers.
+
+---
+
+## Access and citation
+
+
+| Resource | Link |
+|---|---|
+| **Published version (Teknokultura)** | [Go to journal site →](https://revistas.ucm.es/index.php/TEKN/article/view/82642) |
+| **Full text (PDF)** | [Download here →](https://revistas.ucm.es/index.php/TEKN/article/view/82642/4564456563624) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/scholar?hl=es&q=La+batalla+virtual+por+la+memoria+Acosta+y+Lara+Wilchinski+2022) |
+
+---
+
+## Replication materials
+
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/MarchaDelSilencio_Twitter).

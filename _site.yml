@@ -4,26 +4,32 @@ description: |
   Federico Acosta y Lara
 output_dir: "_site"
 theme: fede_theme.css
+
 navbar:
   right:
-    - text: "Publications"
+    - text: "Research"
       href: publications.html
       menu:
-       - text: "Articles"
-         href: articles.html
-       - text: "Other works"
-         href: works.html
+        - text: "Articles"
+          href: articles.html
+        - text: "Other works"
+          href: works.html
     - text: "CV"
       href: cv.html
-    - text: "Data"
-      href: data.html
     - text: "Other Stuff"
       href: stuff.html
     - icon: fas fa-adjust
   search: false
   logo: "images/avatar.png"
   favicon: "images/favicon.png"
+
 output: 
   distill::distill_article:
     includes:
       after_body: "_after_body.html"
+
+collections:
+  articles:
+    output: true
+  works:
+    output: true

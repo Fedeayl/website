@@ -1,0 +1,36 @@
+---
+title: "COVID-19 y elecciones subnacionales en Uruguay"
+description: "Book chapter in *La democracia a prueba. Los años que votamos en pandemia en las Américas*, published by Universidad Nacional de Rosario (2022)."
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+  - first_name: "Diego"
+    last_name: "Luján"
+    orcid_id: "0000-0002-2045-7652"
+date: "2022-12-04"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+In this chapter we use a rational choice approach to analyze the effects of the COVID-19 pandemic on turnout in the 2020 Uruguayan subnational elections. We discuss how public health restrictions, risk perceptions, and local electoral dynamics shaped participation patterns in a context of uncertainty and reduced mobilization.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Book chapter (PDF)** | [Download here →](https://github.com/Fedeayl/Departamentales-vs-COVID/blob/master/depcovidCHP.pdf) |
+| **Full book** | [View here →](http://rephip.unr.edu.ar/xmlui/bitstream/handle/2133/23410/La-democracia-a-prueba.pdf?sequence=3) |
+| **ISBN record** | [View entry →](http://isbn.bibna.gub.uy/catalogo.php?mode=detalle&nt=42860) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/scholar?hl=en&q=COVID-19+y+elecciones+subnacionales+en+Uruguay+Acosta+y+Lara+Luján+2022) |
+
+---
+
+## Replication materials
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/Departamentales-vs-COVID).

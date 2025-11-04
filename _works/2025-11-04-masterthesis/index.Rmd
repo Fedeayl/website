@@ -1,0 +1,35 @@
+---
+title: "Los perdedores importan: la derecha latinoamericana durante el giro a la izquierda"
+description: "Tesis de Maestría"
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+date: 2024-05-25
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+
+## Abstract
+
+How did Latin American right-wing parties adapt programmatically to remain competitive during the left turn? To address this question, this study seeks to contribute to the literature on Latin America’s left turn by analyzing the political strategies of right-wing parties—the main losers of that shift. Using a two-dimensional spatial approach and quantitative analysis, it argues that right-wing parties adopted a set of programmatic positioning strategies to stay competitive. First, they de-emphasized economic issues while emphasizing value-based ones. Second, they centered their positions on the economic axis while moving toward the extreme on the values axis. Third, they blurred—or made less clear—their stances on economic issues while clarifying their positions on value issues.
+These propositions are empirically tested using expert survey data from V-Party, legislative elite surveys from PELA-USAL, and programmatic positioning measures based on data from the Manifesto Project. The study concludes that, on average, Latin American right-wing parties did indeed implement these strategies.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Thesis repository (Universidad de la República)** | [View thesis →](https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/43925) |
+| **Full text (PDF)** | [Download here →](https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/43925/1/TMCP_AcostayLaraFederico.pdf) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=OwmUSLgAAAAJ&citation_for_view=OwmUSLgAAAAJ:eQOLeE2rZwMC) |
+
+---
+
+## Replication materials
+
+Replication data upon request

@@ -1,0 +1,33 @@
+---
+title: "Coordinación Electoral y Doble Voto Simultáneo (Undergraduate Thesis)"
+description: "Undergraduate thesis on electoral coordination at the subnational level in Uruguay."
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+date: "2022-12-04"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+In my undergraduate thesis I studied the electoral coordination process at the subnational level in Uruguay. The work explores how the *Double Simultaneous Vote* mechanism affects the coordination of candidates in departmental elections and the implications this has for local party competition and representation.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Thesis repository (Universidad de la República)** | [View thesis →](https://hdl.handle.net/20.500.12008/26081) |
+| **Full text (PDF)** | [Download here →](https://www.colibri.udelar.edu.uy/jspui/bitstream/20.500.12008/26081/1/TCP_AcostayLaraFederico.pdf) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=OwmUSLgAAAAJ&citation_for_view=OwmUSLgAAAAJ:d1gkVwhDpl0C) |
+
+---
+
+## Replication materials
+
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/Dep_ElectoralCoordinationUY).

@@ -1,0 +1,33 @@
+---
+title: "Coordinación Electoral y Doble Voto Simultáneo"
+description: "Published in Revista Uruguaya de Ciencia Política (2022)"
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+date: "2022-12-04"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+The 1996 electoral reform made departmental elections independent from national elections in Uruguay and configured traditional first-past-the-post systems at the subnational level. Yet, it preserved a voting mechanism called *Double Simultaneous Vote* that is crucial for the dynamics of the contest. This article proposes an adaptation of the classic theory of electoral coordination, considering the effects of that mechanism. Specifically, it argues that the upper limit of effective candidates in the system is four, which is twice the upper limit of a traditional majoritarian electoral system. This argument is tested using data for Uruguay covering the 1971–2020 period.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **Published version (RUCP)** | [Go to journal site →](https://doi.org/10.26851/RUCP.31.2.2) |
+| **Full text (PDF)** | [Download here →](https://rucp.cienciassociales.edu.uy/index.php/rucp/article/view/547/385) |
+| **English version (PDF)** | [Read in English →](https://github.com/Fedeayl/Dep_ElectoralCoordinationUY/blob/main/ElectoralCoord_UY.pdf) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=OwmUSLgAAAAJ&citation_for_view=OwmUSLgAAAAJ:UeHWp8X0CEIC) |
+
+---
+
+## Replication materials
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/Dep_ElectoralCoordinationUY).

@@ -1,0 +1,33 @@
+---
+title: "La institucionalización del sistema de partidos de Paraguay, ¿estable, arraigado y programático?"
+description: "Published in Revista Paraguay desde las Ciencias Sociales (2023)"
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+date: "2023-07-23"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+The institutionalization of a party system has traditionally been considered relevant to the democratic quality of a country. This work investigates the institutionalization of the Paraguayan party system in two dimensions: the stability of the electoral competition and the rootedness of parties in society. At the same time, this work focuses on the ideological component of this linkage. Here, it is shown that the Paraguayan party system is stable over time and across the territory. It is a slightly ideologically polarized system, but there is a trend of higher polarization in legislative elites and evident ideological differences among voters of different parties.
+
+---
+
+## Access and citation
+
+
+| Resource | Link |
+|-----------|------|
+| **Published version (RPCS)** | [Go to journal site →](https://publicaciones.sociales.uba.ar/index.php/revistaparaguay/article/view/7846) |
+| **Full text (PDF)** | [Download here →](https://publicaciones.sociales.uba.ar/index.php/revistaparaguay/article/download/7846/7558) |
+| **Google Scholar** | [View entry →](https://scholar.google.com/citations?view_op=view_citation&hl=es&user=OwmUSLgAAAAJ&citation_for_view=OwmUSLgAAAAJ:UeHWp8X0CEIC) |
+
+---
+
+## Replication materials
+
+Replication data and code are available [HERE →](https://github.com/Fedeayl/InstPy).

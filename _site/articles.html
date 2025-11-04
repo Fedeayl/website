@@ -20,6 +20,7 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -107,7 +108,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["My articles"]},{"type":"character","attributes":{},"value":["articles"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["My articles"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -455,8 +456,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -567,9 +568,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -664,6 +677,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1425,6 +1443,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1502,8 +1526,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1529,12 +1554,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1889,216 +1915,299 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   </style>
-  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+  <style type="text/css">/* =========================
+     Federico — Neutral Gray Theme
+     ========================= */
 
-  /* base variables */
-
-  /* Edit the CSS properties in this file to create a custom
-     Distill theme. Only edit values in the right column
-     for each row; values shown are the CSS defaults.
-     To return any property to the default,
-     you may set its value to: unset
-     All rows must end with a semi-colon.                      */
-
-  /* Optional: embed custom fonts here with `@import`          */
-  /* This must remain at the top of this file.                 */
-
-
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Serif+4:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
   html {
-    /*-- Main font sizes --*/
-    --title-size:      30px;
-    --body-size:       1.06rem;
-    --code-size:       14px;
-    --aside-size:      12px;
-    --fig-cap-size:    13px;
-    
-    /*-- Main font colors --*/
-    --title-color:     #3B4252;
-    --header-color:    #434C5E;
-    --body-color:      #4C566A;
-    --aside-color:     #4C566A;
-    --fig-cap-color:   #4C566A;
-    /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    Inter;
-    --mono-font:       monospace;
-    --body-font:       Inter;
-    --navbar-font:     Inter;  /* websites + blogs only */
+    /* ---------- Type scale ---------- */
+    --title-size:      34px;
+    --body-size:       1.08rem;
+    --code-size:       13.5px;
+    --aside-size:      13px;
+    --fig-cap-size:    13.5px;
+
+    /* ---------- Neutral gray palette ---------- */
+    /* Inspired by OpenAI’s UI: soft warm-grays, no blue cast */
+    --title-color:     #1a1a1a;  /* near-black */
+    --header-color:    #222222;
+    --body-color:      #2e2e2e;
+    --aside-color:     #4a4a4a;
+    --fig-cap-color:   #4a4a4a;
+
+    /* ---------- Fonts ---------- */
+    --heading-font:    "Source Serif 4", Georgia, "Times New Roman", serif;
+    --body-font:       "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --navbar-font:     "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono-font:       "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
-  /*--  METADATA --*/
-  d-byline {
-    --heading-size:    0.8rem;
-    --heading-color:   #3B4252;
-    --body-size:       1.0rem;
-    --body-color:      #434C5E;
-
-
+  /* Global rhythm */
+  body {
+    line-height: 1.62;
+    letter-spacing: 0.005em;
+    background-color: #f5f5f5; /* neutral paper-gray */
+    color: var(--body-color);
+    padding-bottom: 40px;
   }
 
-  /*-- ARTICLE TABLE OF CONTENTS --*/
-  .d-contents {
-    --heading-size:    15px;
-    --contents-size:   14px;
+  /* Headings */
+  d-title h1, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--title-color);
+    font-weight: 600;
+  }
+  d-title h1 { font-size: var(--title-size); }
 
+  /* Body text */
+  p, li, d-article {
+    font-family: var(--body-font);
+    font-size: var(--body-size);
   }
 
-  /*-- ARTICLE APPENDIX --*/
-  d-appendix {
-    --heading-size:    14px;
-    --heading-color:   #3B4252;
-    --text-size:       0.8em;
-    --text-color:      #4C566A;
-  }
-
-  /*-- ARTICLE images --*/
-  .thumbnail {
-      padding: 0px!important;
-      margin: 0px!important;
-      max-width: 20%!important;
-      height: auto!important;
-      vertical-align: text-top!important;
-  }
-
-
-  /*-- WEBSITE HEADER + FOOTER --*/
-  /* These properties only apply to Distill sites and blogs  */
-
+  /* Header / Nav */
   .distill-site-header {
     --title-size:       18px;
-    --text-color:       #ECEFF4;
+    --text-color:       #1f1f1f;
     --text-size:        15px;
-    --hover-color:      #81A1C1;
-    --bkgd-color:       #2E3440;
+    --hover-color:      #333333;
+    --bkgd-color:       rgba(255,255,255,0.85);
+    backdrop-filter:    blur(6px);
+    border-bottom: 1px solid #e0e0e0;
   }
 
-
+  /* Footer */
   .distill-site-footer {
-    --text-color:       #ECEFF4;
+    --text-color:       #444444;
     --text-size:        12px;
-    --hover-color:      #81A1C1;
-    --bkgd-color:       #2E3440;
-      width: 100%;
-      height: 30px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      line-height:30px;
-      padding:0 20px;
+    --hover-color:      #111111;
+    --bkgd-color:       #eeeeee;
+    width: 100%;
+    height: 32px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    line-height: 32px;
+    padding: 0 20px;
+    border-top: 1px solid #d9d9d9;
   }
 
-
-
-
-
-  /*-- Additional custom styles --*/
-  /* Add any additional CSS rules below                      */
-
+  /* Buttons */
   .btn-outline-dark{
     background-color: transparent;
-    color: #2E3440;
-    border: 1px solid;
-    border-color: #2E3440;
+    color: #222222;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: all .15s ease;
   }
-
   .btn-outline-dark:hover{
-    background-color: #3B4252;
-    border-color: #3B4252;
-    color: #D8DEE9;
+    background-color: #222222;
+    color: #f5f5f5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+
+  /* Hero tweaks */
+  d-title {
+    text-align: center;
+    margin-top: 6rem;
+  }
+  d-title img {
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    border: 3px solid #fff;
+  }
+
+  /* Dark mode — warm neutral grays, not blue */
+  .darkmode {
+    --title-color:     #f4f4f4;
+    --header-color:    #e8e8e8;
+    --body-color:      #d9d9d9;
+    --aside-color:     #b5b5b5;
+    --fig-cap-color:   #b5b5b5;
+    --heading-font:    "Source Serif 4", Georgia, serif;
+    --body-font:       "Inter", system-ui, sans-serif;
+    --navbar-font:     "Inter", system-ui, sans-serif;
+    --mono-font:       "JetBrains Mono", monospace;
+
+    background-color: #1d1d1d;
+    color: #e6e6e6;
+  }
+
+  .darkmode body {
+    background-color: #1b1b1b;
+  }
+
+  .darkmode .distill-site-header {
+    --text-color: #f4f4f4;
+    --hover-color: #ffffff;
+    --bkgd-color: rgba(30,30,30,0.85);
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  .darkmode .distill-site-footer {
+    --text-color: #bfbfbf;
+    --hover-color: #ffffff;
+    --bkgd-color: #1d1d1d;
+    border-top: 1px solid #3a3a3a;
+  }
+
+  .darkmode .btn-outline-dark {
+    background-color: transparent;
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+  }
+  .darkmode .btn-outline-dark:hover {
+    background-color: #f4f4f4;
+    color: #1b1b1b;
+    box-shadow: 0 6px 20px rgba(255,255,255,0.15);
   }
 
 
-  /* Darkmode */
+  /* Publications list: compact, image-free, professional */
+  /* Publications list: compact, image-free, professional */
+  .publication-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 4rem;
+  }
+  .publication-list li {
+    padding: 1.2rem 0;
+    border-top: 1px solid #e5e5e5;
+  }
+  .publication-list li:last-child { border-bottom: 1px solid #e5e5e5; }
+  .pub-title a {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--title-color);
+    text-decoration: none;
+  }
+  .pub-title a:hover { text-decoration: underline; }
+  .pub-meta { color: #666; margin-top: .15rem; font-size: .98rem; }
+  .pub-authors { color: #444; margin-top: .15rem; }
+  .pub-links { margin-top: .5rem; }
+  .pub-btn {
+    display: inline-block;
+    font-size: .92rem;
+    padding: .25rem .6rem;
+    border: 1px solid #222;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #222;
+    margin-right: .4rem;
+  }
+  .pub-btn:hover { background: #222; color: #f5f5f5; }
+  .darkmode .pub-btn { color: #f4f4f4; border-color: #f4f4f4; }
+  .darkmode .pub-btn:hover { background: #f4f4f4; color: #1b1b1b; }
 
-     .darkmode {
-       /*-- Main font sizes --*/
-       --title-size:      30px;
-       --body-size:       1.06rem;
-       --code-size:       14px;
-       --aside-size:      12px;
-       --fig-cap-size:    13px;
-       /*-- Main font colors --*/
-       --title-color:     #ECEFF4;
-       --header-color:    #ECEFF4;
-       --body-color:      #ECEFF4;
-       --aside-color:     #ECEFF4;
-       --fig-cap-color:   #ECEFF4;
-       /*-- Specify custom fonts ~~~ must be imported above   --*/
-       --heading-font:    Inter;
-       --mono-font:       Inter;
-       --body-font:       Inter;
-       --navbar-font:     Inter; /* websites + blogs only */
-       background-color: #434C5E;
-       color: #E5E9F0;
-     }
+  /* =========================
+     Fine-tuning article layout
+     ========================= */
 
-     .darkmode body {
-       background-color: #E5E9F0;
-     }
+  /* 1. Slightly smaller main title */
+  d-title h1 {
+    font-size: 2.1rem !important; /* default ~2.4rem */
+    line-height: 1.25;
+    font-weight: 600;
+  }
 
-     .darkmode d-article {
-       background-color: #434C5E;
-       color: #E5E9F0;
-     }
+  /* 2. Larger authors under the title */
+  d-byline .authors {
+    font-size: 1.05rem !important;
+    font-weight: 500;
+    color: var(--title-color);
+  }
 
-     .darkmode d-title {
-       color: #D8DEE9;
-     }
+  /* Optional: if you want ORCID icons to scale up too */
+  d-byline .authors img {
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-left: 4px;
+  }
 
-     .darkmode d-byline {
-       --heading-size:    0.8rem;
-       --heading-color:   #ECEFF4;
-       --body-size:       1.0rem;
-       --body-color:      #ECEFF4;
-     }
+  /* 3. Slightly larger and more readable abstract text */
+  d-article p {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
 
-     .darkmode .d-contents {
-       --heading-size:    18px;
-       --contents-size:   13px;
-     }
+  /* 4. Make the "Abstract" heading a bit subtler */
+  d-article h2:first-of-type {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--header-color);
+    letter-spacing: 0.01em;
+  }
 
-     .darkmode d-appendix {
-       --heading-size:    15px;
-       --heading-color:   #ECEFF4;
-       --text-size:       0.8em;
-       --text-color:      #ECEFF4;
-     }
 
-     .darkmode d-appendix a {
-       color:      #ECEFF4;
-     }
+  /* =========================
+     Distill byline (authors/date) via CSS variables
+     ========================= */
 
-     .darkmode .distill-site-header {
-       --title-size:       18px;
-       --text-color:       #ECEFF4;
-       --text-size:        15px;
-       --hover-color:      #81A1C1;
-       --bkgd-color:       #2E3440;
-     }
+  /* Light mode: make authors larger and darker */
+  d-byline {
+    --heading-size: 0.85rem;                  /* label size: AUTHORS, PUBLISHED */
+    --heading-color: var(--aside-color);      /* label color */
+    --body-size: 1.12rem;                     /* author/date text size */
+    --body-color: var(--title-color);         /* author/date color */
+    letter-spacing: 0.005em;
+  }
 
-     .darkmode .distill-site-footer {
-       --text-color:       #ECEFF4;
-       --text-size:        12px;
-       --hover-color:      #81A1C1;
-       --bkgd-color:       #2E3440;
-     }
+  /* Dark mode: switch the variables to light text */
+  .darkmode d-byline {
+    --heading-size: 0.9rem;
+    --heading-color: #bfbfbf;                 /* lighter labels */
+    --body-size: 1.15rem;                     /* slightly bigger authors in dark */
+    --body-color: #f0f0f0;                    /* bright author/date text */
+  }
 
-     .darkmode d- .sourceCode {
-       background-color: #555;
-     }
-     
-     .darkmode .btn-outline-dark {
-       background-color: transparent;
-       color: #ECEFF4;
-       border: 1px solid;
-       border-color: #ECEFF4;
-       
-     }
-     .darkmode .btn-outline-dark:hover{
-       background-color: #ECEFF4;
-       border-color: #434C5E;
-       color: #434C5E;
-  }</style>
+  /* Optional: ORCID icons and links in byline */
+  d-byline a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  d-byline a:hover { border-bottom-color: currentColor; }
+  d-byline img[alt*="ORCID"] {
+    width: 1.05em;
+    height: 1.05em;
+    vertical-align: text-bottom;
+    margin-left: 6px;
+  }
+
+
+  /* =========================
+     Fix dark-mode table text
+     ========================= */
+
+  .darkmode d-article table,
+  .darkmode d-article th,
+  .darkmode d-article td {
+    background-color: transparent !important;   /* keep same page bg */
+    color: var(--body-color) !important;         /* light gray text */
+    border-color: rgba(180,180,180,0.25) !important;
+  }
+
+  /* make header cells slightly bolder */
+  .darkmode d-article th {
+    font-weight: 600;
+    color: var(--title-color) !important;
+  }
+
+  /* optional: lighten link color inside tables */
+  .darkmode d-article table a {
+    color: #7DD3FC !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(125,211,252,0.35);
+  }
+  .darkmode d-article table a:hover {
+    border-bottom-color: rgba(125,211,252,0.7);
+  }
+  </style>
   <style type="text/css">
   /* base style */
 
@@ -2254,7 +2363,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2269,7 +2378,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
@@ -2290,7 +2399,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Publications
+Research
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
@@ -2300,7 +2409,6 @@ Publications
 </div>
 </div>
 <a href="cv.html">CV</a>
-<a href="data.html">Data</a>
 <a href="stuff.html">Other Stuff</a>
 <a>
 <i class="fas fa-adjust" aria-hidden="true"></i>
@@ -2312,221 +2420,10 @@ Publications
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="My articles">My articles</h1>
-<a href="articles/2024-05-21-personalisminla/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">May 6, 2024</div>
-<div class="dt-authors">
-<div class="dt-author">Diego Luján</div>
-<div class="dt-author">Federico Acosta y Lara</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="articles/2024-05-21-personalisminla/jpla.png"/>
-</div>
-<div class="description">
-<h2>Assessing Electoral Personalism in Latin American Presidential Elections</h2>
-<div class="dt-tags"></div>
-<p>Published in Journal of Politics in Latin America (2024)</p>
-</div>
-</a>
-<a href="articles/2023-07-05-paraguayinst/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">July 23, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Federico Acosta y Lara</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="articles/2023-07-05-paraguayinst/py.png"/>
-</div>
-<div class="description">
-<h2>La institucionalización del sistema de partidos de Paraguay, ¿estable, arraigado y programático?</h2>
-<div class="dt-tags"></div>
-<p>Artículo publicado en Revista Paraguay desde las Ciencias Sociales (2023)</p>
-</div>
-</a>
-<a href="articles/2022-12-21-marcha/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 21, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Federico Acosta y Lara</div>
-<div class="dt-author">Marcelo Wilchinski</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="articles/2022-12-21-marcha/Marcha.png"/>
-</div>
-<div class="description">
-<h2>La  batalla  virtual  por la  memoria:  Un  análisis  de  las  memorias  en disputa en Twitter durante la Marcha del Silencio del 2020 en Uruguay </h2>
-<div class="dt-tags"></div>
-<p>Artículo publicado en Teknokultura (2022)</p>
-</div>
-</a>
-<a href="articles/2022-12-04-electoral-coordination/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 4, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Federico Acosta y Lara</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="articles/2022-12-04-electoral-coordination/coordinacion2022.png"/>
-</div>
-<div class="description">
-<h2>Coordinación Electoral y Doble Voto Simultáneo</h2>
-<div class="dt-tags"></div>
-<p>Artículo publicado en la Revista Uruguaya de Ciencia Política (2022)</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>My articles</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2534,6 +2431,81 @@ function init_posts_list() {
 
 
 <div class="d-article">
+<p>Peer-reviewed publications.</p>
+<div class="layout-chunk" data-layout="l-body">
+<ul class="publication-list">
+<li>
+<div class="pub-title">
+<a href="articles/2025-11-03-Uruguayelections2024/">Uruguay 2024: el retorno del Frente Amplio y la consolidación de dos bloques electorales</a>
+</div>
+<div class="pub-meta">
+Published in Revista Uruguaya de Ciencia Política (2025)
+</div>
+<div class="pub-authors">
+Federico Acosta y Lara · Guillermo Martínez
+</div>
+<div class="pub-meta">
+2025-05-23
+</div>
+</li>
+<li>
+<div class="pub-title">
+<a href="articles/2024-05-21-personalisminla/">Assessing Electoral Personalism in Latin American Presidential Elections</a>
+</div>
+<div class="pub-meta">
+Published in Journal of Politics in Latin America (2024)
+</div>
+<div class="pub-authors">
+Diego Luján · Federico Acosta y Lara
+</div>
+<div class="pub-meta">
+2024-05-06
+</div>
+</li>
+<li>
+<div class="pub-title">
+<a href="articles/2023-07-05-paraguayinst/">La institucionalización del sistema de partidos de Paraguay, ¿estable, arraigado y programático?</a>
+</div>
+<div class="pub-meta">
+Published in Revista Paraguay desde las Ciencias Sociales (2023)
+</div>
+<div class="pub-authors">
+Federico Acosta y Lara
+</div>
+<div class="pub-meta">
+2023-07-23
+</div>
+</li>
+<li>
+<div class="pub-title">
+<a href="articles/2022-12-21-marcha/">La batalla virtual por la memoria: Un análisis de las memorias en disputa en Twitter durante la Marcha del Silencio del 2020 en Uruguay</a>
+</div>
+<div class="pub-meta">
+Published in Teknokultura (2022)
+</div>
+<div class="pub-authors">
+Federico Acosta y Lara · Marcelo Wilchinski
+</div>
+<div class="pub-meta">
+2022-12-21
+</div>
+</li>
+<li>
+<div class="pub-title">
+<a href="articles/2022-12-04-electoral-coordination/">Coordinación Electoral y Doble Voto Simultáneo</a>
+</div>
+<div class="pub-meta">
+Published in Revista Uruguaya de Ciencia Política (2022)
+</div>
+<div class="pub-authors">
+Federico Acosta y Lara
+</div>
+<div class="pub-meta">
+2022-12-04
+</div>
+</li>
+</ul>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
