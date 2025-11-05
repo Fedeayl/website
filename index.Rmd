@@ -11,11 +11,12 @@ links:
   - label: '<i class="fas fa-envelope"></i>'
     url: "mailto:federico.acostaylara@outlook.com"
 output:
-  postcards::jolla
+  postcards::trestles
 site: distill::distill_website
 editor_options: 
   chunk_output_type: console
 ---
+
 
 
 I am a Ph.D. student in Political Science at Washington University in St. Louis.

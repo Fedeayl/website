@@ -5,7 +5,10 @@ output:
     self_contained: false
 ---
 
-Peer-reviewed publications.
+
+<p align="center" style="font-size:1.3rem; font-style:blod; margin-top:1rem;">
+  Peer-reviewed publications
+</p>
 
 ```{r, echo=FALSE, results='asis'}
 # Build a clean list of items in _articles/
