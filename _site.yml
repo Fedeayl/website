@@ -10,8 +10,10 @@ navbar:
     - text: "Research"
       href: publications.html
       menu:
-        - text: "Articles"
+        - text: "Published Papers"
           href: articles.html
+        - text: "Working papers"
+          href: workingpapers.html
         - text: "Other works"
           href: works.html
     - text: "CV"

@@ -1,20 +1,17 @@
 ---
-title: "My articles"
+title: "Work in Progress"
 output:
   distill::distill_article:
     self_contained: false
 ---
 
 
-<p align="center" style="font-size:1.3rem; font-style:bold; margin-top:0.2rem;">
-  Peer-reviewed publications.
-</p>
 
 ```{r, echo=FALSE, results='asis'}
 # Build a clean list of items in _articles/
 library(rmarkdown)
 
-root <- "_articles"
+root <- "_workinprogress"
 dirs <- list.dirs(root, recursive = FALSE, full.names = TRUE)
 dirs <- dirs[file.exists(file.path(dirs, "index.Rmd"))]
 
@@ -40,7 +37,7 @@ for (i in seq_along(fm)) {
     authors <- paste(an[nzchar(an)], collapse = " · ")
   }
   # collection output lives at 'articles/<folder>/'
-  href <- file.path("articles", basename(dirs[i]), "")
+  href <- file.path("workinprogress", basename(dirs[i]), "")
   cat('  <li>\n')
   cat(sprintf('    <div class="pub-title"><a href="%s">%s</a></div>\n', href, title))
   if (nzchar(desc))    cat(sprintf('    <div class="pub-meta">%s</div>\n', desc))

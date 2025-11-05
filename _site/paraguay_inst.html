@@ -2075,16 +2075,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   /* Publications list: compact, image-free, professional */
-  /* Publications list: compact, image-free, professional */
+  /* Publications list – mobile-safe */
   .publication-list {
     list-style: none;
-    padding: 0;
-    margin: 0rem 0rem;
-    margin-left: -5rem;
-    margin-right: -5rem;
-    padding-left: 0rem;   /* reduce margen lateral izquierdo */
-    padding-right: 0rem;  /* reduce margen lateral derecho */
+    margin: 0;                 /* no negative margins on mobile */
+    padding: 0;                /* flush edges */
   }
+
+  /* Prevent long titles from overflowing */
+  .pub-title a {
+    overflow-wrap: anywhere;   /* allow breaks inside long words/URLs */
+    word-break: break-word;
+  }
+
+
   .publication-list li {
     padding: 1.2rem 0;
     border-top: 1px solid #e5e5e5;
@@ -2218,7 +2222,69 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .darkmode d-article table a:hover {
     border-bottom-color: rgba(125,211,252,0.7);
   }
-  </style>
+
+
+
+  /* ======= Responsive width fix for Distill containers ======= */
+  /* Make the center column wider on desktops, fluid on phones/tablets */
+
+  .page,
+  .page-inner,
+  d-article,
+  d-title,
+  .posts-list,
+  .listing {
+    max-width: 1280px !important;      /* wider center column on big screens */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0rem !important;   /* comfortable gutters */
+    padding-right: 0rem !important;
+  }
+
+  /* Extra-wide desktops: allow a bit more width if you want */
+  @media (min-width: 1400px) {
+    .page,
+    .page-inner,
+    d-article,
+    d-title,
+    .posts-list,
+    .listing {
+      max-width: 1320px !important;
+    }
+  }
+
+  /* Tablets & phones: full-width, no squishing or overflow */
+  @media (max-width: 1024px) {
+    .page,
+    .page-inner,
+    d-article,
+    d-title,
+    .posts-list,
+    .listing {
+      max-width: 100% !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+
+  /* ======= Publication list – remove hacks, keep it fluid ======= */
+  .publication-list {
+    list-style: none;
+    margin: 0 !important;              /* no negative margins */
+    padding: 0 !important;
+    width: 100%;
+  }
+  .publication-list li {
+    padding: 1rem 0;
+    border-top: 1px solid #e5e5e5;
+  }
+  .publication-list li:last-child { border-bottom: 1px solid #e5e5e5; }
+
+  /* Dark mode border subtlety */
+  .darkmode .publication-list li,
+  .darkmode .publication-list li:last-child {
+    border-color: rgba(180,180,180,0.25);
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2415,7 +2481,8 @@ Research
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="articles.html">Articles</a>
+<a href="articles.html">Published Papers</a>
+<a href="workingpapers.html">Working papers</a>
 <a href="works.html">Other works</a>
 </div>
 </div>
