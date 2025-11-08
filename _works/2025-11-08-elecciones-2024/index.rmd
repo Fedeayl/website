@@ -1,0 +1,35 @@
+---
+title: "Uruguay: de la sociedad amortiguadora a la polarización afectiva"
+description: "Book chapter in *Elecciones y comportamiento electoral en una democracia de partidos: ciclo electoral 2024 en Uruguay* (2025)."
+author:
+  - first_name: "Federico"
+    last_name: "Acosta y Lara"
+    orcid_id: "0000-0001-9238-2162"
+  - first_name: "Juan Andrés"
+    last_name: "Moraes"
+    orcid_id: "0000-0002-7406-3691"
+date: "2025-11-08"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Abstract
+
+This chapter examines the rise of affective polarization in Uruguay, a country traditionally regarded as one of the most moderate and consensual democracies in Latin America. Drawing on comparative and national survey data, it shows that Uruguay exhibits consistently high levels of affective polarization since 2009, driven mainly by ideology and partisan attachment. The analysis challenges the idea of Uruguayan exceptionalism and highlights how emotions, identities, and negative campaigning have reshaped the country’s political landscape.
+
+---
+
+## Access and citation
+
+| Resource | Link |
+|-----------|------|
+| **ISBN record** | [View entry →](http://isbn.bibna.gub.uy/catalogo.php?mode=detalle&nt=54782) |
+
+
+---
+
+## Replication materials
+
+
+Replication data and code are available upon request.

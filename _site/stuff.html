@@ -1980,18 +1980,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /* Footer */
   .distill-site-footer {
-    --text-color:       #444444;
-    --text-size:        12px;
+    --text-color:       #555555;
+    --text-size:        10px;           /* antes 12px */
     --hover-color:      #111111;
     --bkgd-color:       #eeeeee;
     width: 100%;
-    height: 32px;
+    height: 24px;                       /* más angosto */
     position: fixed;
     bottom: 0;
     left: 0;
-    line-height: 32px;
-    padding: 0 20px;
+    line-height: 22px;                  /* ajusta el centrado vertical */
+    padding: 0 16px;                    /* menos padding lateral */
     border-top: 1px solid #d9d9d9;
+    font-size: var(--text-size);
   }
 
   /* Buttons */
@@ -2277,6 +2278,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .darkmode .publication-list li,
   .darkmode .publication-list li:last-child {
     border-color: rgba(180,180,180,0.25);
+  }
+
+
+
+
+  /* =========================
+     Make mobile menu icon larger
+     ========================= */
+
+  .nav-toggle, 
+  .distill-site-header .nav-toggle {
+    font-size: 1.8rem !important;      /* tamaño del ícono */
+    line-height: 1 !important;
+    padding: 0.5rem 0.75rem !important; /* más área clickeable */
+    cursor: pointer;
+  }
+
+  /* Aumenta también el tamaño del botón invisible del área táctil */
+  .distill-site-header .nav-toggle svg,
+  .distill-site-header .nav-toggle i {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* Si querés separarlo un poco del borde derecho */
+  .distill-site-header .nav-toggle {
+    margin-right: 8px !important;
+  }
+
+  /* En modo oscuro */
+  .darkmode .distill-site-header .nav-toggle {
+    color: #f4f4f4 !important;
   }</style>
   <style type="text/css">
   /* base style */

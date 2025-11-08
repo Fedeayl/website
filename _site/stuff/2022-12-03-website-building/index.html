@@ -1990,18 +1990,19 @@ p, li, d-article {
 
 /* Footer */
 .distill-site-footer {
-  --text-color:       #444444;
-  --text-size:        12px;
+  --text-color:       #555555;
+  --text-size:        10px;           /* antes 12px */
   --hover-color:      #111111;
   --bkgd-color:       #eeeeee;
   width: 100%;
-  height: 32px;
+  height: 24px;                       /* más angosto */
   position: fixed;
   bottom: 0;
   left: 0;
-  line-height: 32px;
-  padding: 0 20px;
+  line-height: 22px;                  /* ajusta el centrado vertical */
+  padding: 0 16px;                    /* menos padding lateral */
   border-top: 1px solid #d9d9d9;
+  font-size: var(--text-size);
 }
 
 /* Buttons */

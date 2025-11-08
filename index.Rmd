@@ -1,5 +1,5 @@
 ---
-title: "Federico Acosta y Lara"
+title: "Federico<br>Acosta y Lara"
 image: "images/avatar.png"
 links: 
   - label: '<i class="fab fa-twitter"></i>'
@@ -9,7 +9,7 @@ links:
   - label: '<i class="fab fa-google"></i>'
     url: 'https://scholar.google.com/citations?user=OwmUSLgAAAAJ&hl=es target="_blank"'
   - label: '<i class="fas fa-envelope"></i>'
-    url: "mailto:federico.acostaylara@outlook.com"
+    url: "mailto:acostaylara@wustl.edu"
 output:
   postcards::trestles
 site: distill::distill_website
