@@ -21,8 +21,8 @@ editor_options:
 
 I am a Ph.D. student in Political Science at Washington University in St. Louis.
 
-Before joining WashU, I earned a Master’s degree (2024) and a B.A. in Political Science (2020) from the Universidad de la República (Uruguay).
+Before joining WashU, I earned a Master’s degree (2024) and a B.A. in Political Science (2020) from the Universidad de la República (Uruguay), where I also completed a Diploma in Economics (2021).
 
-My research focuses on political economy and distributive politics in Latin America, with a particular interest in how clientelism, party systems, and institutional reforms shape political behavior and representation. I also study affective polarization, especially in contexts characterized by weakly institutionalized party systems.
+My research focuses on two main areas. First, I am interested in political economy in Latin America, particularly issues related to distributive politics and political representation. Second, I study affective polarization and the factors that shape emotional and partisan divisions in politics.
 
 On this site, you can find my published work, replication materials, data, code, and other ongoing projects.

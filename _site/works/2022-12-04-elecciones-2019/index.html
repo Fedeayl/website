@@ -2292,6 +2292,38 @@ d-title,
 .darkmode .publication-list li,
 .darkmode .publication-list li:last-child {
   border-color: rgba(180,180,180,0.25);
+}
+
+
+
+
+/* =========================
+   Make mobile menu icon larger
+   ========================= */
+
+.nav-toggle, 
+.distill-site-header .nav-toggle {
+  font-size: 2rem !important;      /* tamaño del ícono */
+  line-height: 1.2 !important;
+  padding: 0.7rem 1rem !important; /* más área clickeable */
+  cursor: pointer;
+}
+
+/* Aumenta también el tamaño del botón invisible del área táctil */
+.distill-site-header .nav-toggle svg,
+.distill-site-header .nav-toggle i {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+/* Si querés separarlo un poco del borde derecho */
+.distill-site-header .nav-toggle {
+  margin-right: 10px !important;
+}
+
+/* En modo oscuro */
+.darkmode .distill-site-header .nav-toggle {
+  color: #f4f4f4 !important;
 }</style>
 <style type="text/css">
 /* base style */
